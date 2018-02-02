@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>question</key>
+		<string>Which Indie rock band released a song in 2005 called &apos;I Predict A Riot&apos;?</string>
+		<key>answers</key>
+		<array>
+			<string>The Fratellis</string>
+			<string>Franz Ferdinand</string>
+			<string>Kaiser Chiefs
+
+</string>
+			<string>Kasabian</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Kaiser Chiefs</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What year did Rihanna achieve global success with her hit single &apos;Umbrella&apos;?</string>
+		<key>answers</key>
+		<array>
+			<string>2005</string>
+			<string>2006</string>
+			<string>2007</string>
+			<string>2008</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>2007</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which female artist released an album called &apos;Fearless&apos; in 2009?</string>
+		<key>answers</key>
+		<array>
+			<string>Atlanta</string>
+			<string>Lady Gaga</string>
+			<string>Taylor Swift</string>
+			<string>Britney Spears</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Beyonce</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which Lady Gaga song includes the lyrics, &apos;Rah rah ah-ah-ah, Ro mah ro-mah-mah&apos;?</string>
+		<key>answers</key>
+		<array>
+			<string>Poker Face</string>
+			<string>Bad Romance</string>
+			<string>Paparazzi</string>
+			<string>Just Dance</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Bad Romance</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Which former Spice Girl topped the charts with &apos;I Turn to You&apos;?</string>
+		<key>answers</key>
+		<array>
+			<string>Mel C</string>
+			<string>Mel B</string>
+			<string>Victoria</string>
+			<string>Emma</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Mel C</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>What year did Beyoncé release &apos;If I were a Boy&apos;?</string>
+		<key>answers</key>
+		<array>
+			<string>2008</string>
+			<string>2006</string>
+			<string>2009</string>
+			<string>2005</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>2008</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Where was Kendrick Lamar born?</string>
+		<key>answers</key>
+		<array>
+			<string>Atlanta</string>
+			<string>Brooklyn</string>
+			<string>Santa Monica</string>
+			<string>Compton</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Compton</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Who won the 2010 BRIT Award for British Male Solo Artist?</string>
+		<key>answers</key>
+		<array>
+			<string>John Newman</string>
+			<string>Dizzee Rascal</string>
+			<string>Tinie Tempah</string>
+			<string>Olly Murs</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Dizzee Rascal</string>
+	</dict>
+</array>
+</plist>

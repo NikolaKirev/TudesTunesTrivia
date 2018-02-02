@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>question</key>
+		<string>Which Irish city did the &apos;girl&apos; from Ed Sheeran&apos;s single hail from?</string>
+		<key>answers</key>
+		<array>
+			<string>Dublin</string>
+			<string>Sligo</string>
+			<string>Cork</string>
+			<string>Galway</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Galway</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Presented in February of 2017, who won the Grammy Award for Best New Artist?</string>
+		<key>answers</key>
+		<array>
+			<string>Maren Morris</string>
+			<string>Kelsea Ballerini</string>
+			<string>The Chainsmokers</string>
+			<string>Chance The Rapper</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Chance The Rapper</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Coldplay teamed up with Chainsmokers on which 2017 track?</string>
+		<key>answers</key>
+		<array>
+			<string>Something Just Like This</string>
+			<string>Closer</string>
+			<string>Kaiser Chiefs
+
+</string>
+			<string>Kasabian</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Kaiser Chiefs</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Their 20th, what studio album did Deep Purple release on April 1st, 2017?</string>
+		<key>answers</key>
+		<array>
+			<string>Infinite</string>
+			<string>Rapture of the Deep</string>
+			<string>Purpendicular</string>
+			<string>Abandon</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Infinite</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Coldplay teamed up with Chainsmokers on which 2017 track?</string>
+		<key>answers</key>
+		<array>
+			<string>Something Just Like This</string>
+			<string>Closer</string>
+			<string>Kaiser Chiefs
+
+</string>
+			<string>Kasabian</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Kaiser Chiefs</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>New Zealand singer and songwriter Ella Marija Lani Yelich-O&apos;Connor is better known as?</string>
+		<key>answers</key>
+		<array>
+			<string>Charli XCX</string>
+			<string>Lorde</string>
+			<string>Lana Del Rey</string>
+			<string>Kimbra</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Lorde</string>
+	</dict>
+	<dict>
+		<key>question</key>
+		<string>Starting his music career as a member of Roxy Music in 1971, who released the album &quot;Reflection&quot; on New Year&apos;s Day, 2017? </string>
+		<key>answers</key>
+		<array>
+			<string>The Fratellis</string>
+			<string>Franz Ferdinand</string>
+			<string>Kaiser Chiefs
+
+</string>
+			<string>Kasabian</string>
+		</array>
+		<key>correctAnswer</key>
+		<string>Kaiser Chiefs</string>
+	</dict>
+</array>
+</plist>
