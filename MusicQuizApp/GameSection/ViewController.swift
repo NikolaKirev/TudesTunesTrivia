@@ -79,6 +79,10 @@ class ViewController: UIViewController {
     
     @IBOutlet var answerButtons: [UIButton]!
     
+    var amountOfCorrectAnswers = 0
+    
+    var quizData: QuizData!
+    
     var amountOfTouches = 0 {
         didSet {
             if self.amountOfTouches >= 1 {
@@ -89,12 +93,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    var amountOfCorrectAnswers = 0
-    
-    var correctAnswerSelected = false
-    
-    var quizData: QuizData!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -2,67 +2,82 @@
 //  CollectionViewController.swift
 //  MusicQuizApp
 //
-//  Created by John Tudor on 31/01/2018.
+//  Created by John Tudor on 05/02/2018.
 //  Copyright © 2018 Jack Tudor. All rights reserved.
 //
-/*
+
 import UIKit
-class CollectionViewController: UICollectionViewController {
+import CardsLayout
+
+class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var categoriesData = [Categories]()
-
+    
+    @IBOutlet var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationItem.title = "Categories"
-        collectionView?.backgroundColor = UIColor.red
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "CategoryTableViewCell")
+        loadCategories()
+        collectionView.collectionViewLayout = CardsCollectionViewLayout()
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.isPagingEnabled = true
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = UIColor.green
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoriesData.count
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cellIdentifier = "CategoryTableViewCell"
-        let categoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? CategoryTableViewCell
+    var colors: [UIColor]  = [
+        UIColor(red: 237, green: 37, blue: 78),
+        UIColor(red: 249, green: 220, blue: 92),
+        UIColor(red: 194, green: 234, blue: 189),
+        UIColor(red: 1, green: 25, blue: 54),
+        UIColor(red: 255, green: 184, blue: 209)
+    ]
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShareCell", for: indexPath) as! CategoriesCollectionViewCell
         let category = categoriesData[indexPath.row]
-        categoryCell?.categoryNameLabel.text = category.name
-        categoryCell?.categorySubtitleLabel.text = category.subtitle
-        categoryCell?.backgroundColor = UIColor.white
-        return (categoryCell)!
+        cell.layer.cornerRadius = 7.0
+        cell.backgroundColor = colors[indexPath.row]
+        cell.categoryName.text = category.name
+        return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return colors.count
     }
-    */
-
+    
+    private func loadCategories() {
+        guard let currentMusic = Categories(name: "Current Music") else { fatalError("cannot load category")
+        }
+        
+        guard let ninetiesMusic = Categories(name: "90's Music") else { fatalError("cannot load category")
+        }
+        
+        guard let noughtiesMusic = Categories(name: "Noughties") else { fatalError("cannot load category")
+        }
+        
+        guard let eightiesMusic = Categories(name: "80's Music") else { fatalError("cannot load category")
+        }
+        
+        guard let seventiesMusic = Categories(name: "70's Music") else { fatalError("cannot load category")
+        }
+        
+        guard let indieMusic = Categories(name: "Indie Music") else { fatalError("cannot load category")
+        }
+        
+        guard let hipHopMusic = Categories(name: "Hip Hop Music") else { fatalError("cannot load category")
+        }
+        
+        categoriesData += [currentMusic, ninetiesMusic, noughtiesMusic, eightiesMusic, seventiesMusic, indieMusic, hipHopMusic]
+    }
 }
-*/
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        self.init(red: CGFloat(red)/255 ,
+                  green: CGFloat(green)/255,
+                  blue: CGFloat(blue)/255,
+                  alpha: 1.0)
+    }
+}

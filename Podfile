@@ -7,4 +7,5 @@ target 'MusicQuizApp' do
      pod 'AccountKit'
     pod 'FacebookCore'
     pod 'FacebookLogin’
+    pod 'CardsLayout'
 end

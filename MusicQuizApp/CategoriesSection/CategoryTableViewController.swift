@@ -8,30 +8,27 @@
 
 import UIKit
 
-class CategoryTableViewController: UITableViewController {
-    
-    var categoriesData = [Categories]()
+var categoriesData = [Categories]()
 
+class CategoryTableViewController: UITableViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categoriesData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryTableViewCell", for: indexPath) as! CategoriesCollectionViewCell
+        let category = categoriesData[indexPath.row]
+        collectionCell.categoryName.text = category.name
+        
+        return collectionCell
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCategories()
-        createSearchFunction()
-        setNavBarProperties()
     }
     
-    func setNavBarProperties() {
-        title = "Music Categories"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
-    func createSearchFunction() {
-        let search = UISearchController(searchResultsController: nil)
-        search.searchResultsUpdater = self as? UISearchResultsUpdating
-        self.navigationItem.searchController = search
-        search.obscuresBackgroundDuringPresentation = ((false as? UISearchResultsUpdating) != nil)
-        search.searchBar.placeholder = "Search categories"
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -42,40 +39,12 @@ class CategoryTableViewController: UITableViewController {
         }
     }
     
-    private func loadCategories() {
-        guard let currentMusic = Categories(name: "Current Music", subtitle: "Trivia round all about todays music") else { fatalError("cannot load category")
-        }
-        
-        guard let ninetiesMusic = Categories(name: "90's Music", subtitle: "Trivia round including some of the big names of the 90s") else { fatalError("cannot load category")
-        }
-        
-        guard let noughtiesMusic = Categories(name: "Noughties", subtitle: "Trivia round discussing the noughties") else { fatalError("cannot load category")
-        }
-        
-        guard let eightiesMusic = Categories(name: "80's Music", subtitle: "Trivia round all about todays music") else { fatalError("cannot load category")
-        }
-
-        guard let seventiesMusic = Categories(name: "70's Music", subtitle: "Trivia round all about todays music" ) else { fatalError("cannot load category")
-        }
-
-        guard let indieMusic = Categories(name: "Indie Music", subtitle: "Trivia round all about todays music") else { fatalError("cannot load category")
-        }
-        
-        guard let hipHopMusic = Categories(name: "Hip Hop Music", subtitle: "Trivia round all about todays music") else { fatalError("cannot load category")
-        }
-
-        categoriesData += [currentMusic, ninetiesMusic, noughtiesMusic, eightiesMusic, seventiesMusic, indieMusic, hipHopMusic]
-    }
-
-}
-
-extension CategoryTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categoriesData.count
+        return 1
     }
     
     
@@ -83,18 +52,49 @@ extension CategoryTableViewController {
         let cellIdentifier = "CategoryTableViewCell"
         guard let categoryCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CategoryTableViewCell else { fatalError("The dequeued cell is not an instance")
         }
-        let category = categoriesData[indexPath.row]
-        categoryCell.categoryNameLabel.text = category.name
-        categoryCell.categorySubtitleLabel.text = category.subtitle
         return categoryCell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let cell = cell as? CategoryTableViewCell {
+            cell.collectionView.dataSource = self
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.bounds.width
     }
 }
 
-extension CategoryTableViewController {
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    private func loadCategories() {
+        guard let currentMusic = Categories(name: "Current Music") else { fatalError("cannot load category")
+        }
+        
+        guard let ninetiesMusic = Categories(name: "90's Music") else { fatalError("cannot load category")
+        }
+        
+        guard let noughtiesMusic = Categories(name: "Noughties") else { fatalError("cannot load category")
+        }
+        
+        guard let eightiesMusic = Categories(name: "80's Music") else { fatalError("cannot load category")
+        }
+
+        guard let seventiesMusic = Categories(name: "70's Music") else { fatalError("cannot load category")
+        }
+
+        guard let indieMusic = Categories(name: "Indie Music") else { fatalError("cannot load category")
+        }
+        
+        guard let hipHopMusic = Categories(name: "Hip Hop Music") else { fatalError("cannot load category")
+        }
+
+        categoriesData += [currentMusic, ninetiesMusic, noughtiesMusic, eightiesMusic, seventiesMusic, indieMusic, hipHopMusic]
+    }
+
+   /* override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as? CategoryTableViewCell
         let extractString = cell?.categoryNameLabel.text
         sharedQuizData = QuizData.loadInQuizData(forFileNamed: extractString ?? "")
         self.performSegue(withIdentifier: "loadQuestions", sender: self)
-    }
-}
+    }*/

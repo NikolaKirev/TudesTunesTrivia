@@ -12,6 +12,8 @@
 		EA05D9371FD5422C00F952D0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05D9361FD5422C00F952D0 /* Category.swift */; };
 		EA0704A92007DD94002592A2 /* Current Music.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA0704A82007DD94002592A2 /* Current Music.plist */; };
 		EA5A8EE51FEA82000054934C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A8EE41FEA82000054934C /* DataController.swift */; };
+		EA5C2B9C2025E6EC0000995E /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C2B9B2025E6EC0000995E /* CategoriesCollectionViewCell.swift */; };
+		EA5C2B9E202888B50000995E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C2B9D202888B50000995E /* CollectionViewController.swift */; };
 		EA601CB71FFE9B1B0090A65D /* QuizCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA601CB61FFE9B1B0090A65D /* QuizCompletedViewController.swift */; };
 		EAB2CE171FD01F1E00542946 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2CE161FD01F1E00542946 /* AppDelegate.swift */; };
 		EAB2CE191FD01F1F00542946 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2CE181FD01F1F00542946 /* ViewController.swift */; };
@@ -20,7 +22,6 @@
 		EAB2CE211FD01F1F00542946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB2CE1F1FD01F1F00542946 /* LaunchScreen.storyboard */; };
 		EAB2CE291FD0486A00542946 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB2CE281FD0486A00542946 /* LaunchViewController.swift */; };
 		EAB2CE301FD096E400542946 /* Noughties.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAB2CE2F1FD096E400542946 /* Noughties.plist */; };
-		EAEA33EF202264A900322208 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEA33EE202264A900322208 /* CollectionViewController.swift */; };
 		EB444A9E465F4E9F6E6B42B4 /* Pods_MusicQuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8250CB8B4BF4A6D19B108248 /* Pods_MusicQuizApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,8 @@
 		EA05D9361FD5422C00F952D0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		EA0704A82007DD94002592A2 /* Current Music.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Current Music.plist"; sourceTree = "<group>"; };
 		EA5A8EE41FEA82000054934C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		EA5C2B9B2025E6EC0000995E /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA5C2B9D202888B50000995E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		EA601CB61FFE9B1B0090A65D /* QuizCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompletedViewController.swift; sourceTree = "<group>"; };
 		EAB2CE131FD01F1E00542946 /* MusicQuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicQuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB2CE161FD01F1E00542946 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +46,6 @@
 		EAB2CE221FD01F1F00542946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAB2CE281FD0486A00542946 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		EAB2CE2F1FD096E400542946 /* Noughties.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Noughties.plist; sourceTree = "<group>"; };
-		EAEA33EE202264A900322208 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,8 @@
 				EA05D9331FD5403E00F952D0 /* CategoryTableViewCell.swift */,
 				EA05D9311FD53FE200F952D0 /* CategoryTableViewController.swift */,
 				EA05D9361FD5422C00F952D0 /* Category.swift */,
-				EAEA33EE202264A900322208 /* CollectionViewController.swift */,
+				EA5C2B9B2025E6EC0000995E /* CategoriesCollectionViewCell.swift */,
+				EA5C2B9D202888B50000995E /* CollectionViewController.swift */,
 			);
 			path = CategoriesSection;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MusicQuizApp/Pods-MusicQuizApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/CardsLayout/CardsLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
@@ -252,6 +256,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardsLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
@@ -305,10 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAEA33EF202264A900322208 /* CollectionViewController.swift in Sources */,
+				EA5C2B9C2025E6EC0000995E /* CategoriesCollectionViewCell.swift in Sources */,
 				EA05D9321FD53FE200F952D0 /* CategoryTableViewController.swift in Sources */,
 				EAB2CE191FD01F1F00542946 /* ViewController.swift in Sources */,
 				EAB2CE291FD0486A00542946 /* LaunchViewController.swift in Sources */,
+				EA5C2B9E202888B50000995E /* CollectionViewController.swift in Sources */,
 				EA601CB71FFE9B1B0090A65D /* QuizCompletedViewController.swift in Sources */,
 				EA05D9341FD5403E00F952D0 /* CategoryTableViewCell.swift in Sources */,
 				EAB2CE171FD01F1E00542946 /* AppDelegate.swift in Sources */,
