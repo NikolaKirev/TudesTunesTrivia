@@ -110,6 +110,7 @@
                     </collectionView>
                     <connections>
                         <outlet property="collectionView" destination="Up1-56-LCn" id="07c-1p-64W"/>
+                        <segue destination="tzA-H7-4rc" kind="show" identifier="loadQuestions" id="Ffs-eD-JP7"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mK-dH-bp8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -169,9 +170,6 @@
                             <outlet property="delegate" destination="IvB-bw-oin" id="wY7-Cd-EP2"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="tzA-H7-4rc" kind="show" identifier="loadQuestions" action="showDetailViewController:sender:" id="eaZ-1o-6Lg"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Mj-OM-C0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,7 +354,4 @@
             <point key="canvasLocation" x="1822" y="117"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="eaZ-1o-6Lg"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -47,6 +47,19 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         return colors.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? CategoriesCollectionViewCell
+        let extractString = cell?.categoryName.text
+        sharedQuizData = QuizData.loadInQuizData(forFileNamed: extractString ?? "")
+        self.performSegue(withIdentifier: "loadQuestions", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nav = segue.destination as? UINavigationController, let vc = nav.viewControllers.first as? ViewController, let quizData = sharedQuizData.popLast() {
+            vc.quizData = quizData
+        }
+    }
+    
     private func loadCategories() {
         guard let currentMusic = Categories(name: "Current Music") else { fatalError("cannot load category")
         }
