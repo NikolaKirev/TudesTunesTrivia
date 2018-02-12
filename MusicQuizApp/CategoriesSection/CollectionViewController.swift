@@ -18,7 +18,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCategories()
-        collectionView.collectionViewLayout = CardsCollectionViewLayout()
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.isPagingEnabled = true

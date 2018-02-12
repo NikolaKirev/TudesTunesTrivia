@@ -11,6 +11,8 @@
 		EA05D9341FD5403E00F952D0 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05D9331FD5403E00F952D0 /* CategoryTableViewCell.swift */; };
 		EA05D9371FD5422C00F952D0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05D9361FD5422C00F952D0 /* Category.swift */; };
 		EA0704A92007DD94002592A2 /* Current Music.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA0704A82007DD94002592A2 /* Current Music.plist */; };
+		EA35816D2031902400CC1200 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35816C2031902400CC1200 /* LaunchScreenViewController.swift */; };
+		EA358170203190F600CC1200 /* UIColor+FontExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35816F203190F600CC1200 /* UIColor+FontExtentions.swift */; };
 		EA5A8EE51FEA82000054934C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A8EE41FEA82000054934C /* DataController.swift */; };
 		EA5C2B9C2025E6EC0000995E /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C2B9B2025E6EC0000995E /* CategoriesCollectionViewCell.swift */; };
 		EA5C2B9E202888B50000995E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C2B9D202888B50000995E /* CollectionViewController.swift */; };
@@ -33,6 +35,8 @@
 		EA05D9331FD5403E00F952D0 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		EA05D9361FD5422C00F952D0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		EA0704A82007DD94002592A2 /* Current Music.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Current Music.plist"; sourceTree = "<group>"; };
+		EA35816C2031902400CC1200 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		EA35816F203190F600CC1200 /* UIColor+FontExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FontExtentions.swift"; sourceTree = "<group>"; };
 		EA5A8EE41FEA82000054934C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		EA5C2B9B2025E6EC0000995E /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA5C2B9D202888B50000995E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,14 @@
 			path = QuizData;
 			sourceTree = "<group>";
 		};
+		EA35816E203190D600CC1200 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA35816F203190F600CC1200 /* UIColor+FontExtentions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		EA5A8EE31FEA81E70054934C /* QuestionSection */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +154,7 @@
 		EAB2CE151FD01F1E00542946 /* MusicQuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				EA35816E203190D600CC1200 /* Extensions */,
 				EA0704A72007DD6F002592A2 /* QuizData */,
 				EA601CB51FFE9AF90090A65D /* CompletedSection */,
 				EA5A8EE31FEA81E70054934C /* QuestionSection */,
@@ -153,6 +166,7 @@
 				EAB2CE1D1FD01F1F00542946 /* Assets.xcassets */,
 				EAB2CE1F1FD01F1F00542946 /* LaunchScreen.storyboard */,
 				EAB2CE221FD01F1F00542946 /* Info.plist */,
+				EA35816C2031902400CC1200 /* LaunchScreenViewController.swift */,
 			);
 			path = MusicQuizApp;
 			sourceTree = "<group>";
@@ -317,8 +331,10 @@
 				EA5C2B9E202888B50000995E /* CollectionViewController.swift in Sources */,
 				EA601CB71FFE9B1B0090A65D /* QuizCompletedViewController.swift in Sources */,
 				EA05D9341FD5403E00F952D0 /* CategoryTableViewCell.swift in Sources */,
+				EA358170203190F600CC1200 /* UIColor+FontExtentions.swift in Sources */,
 				EAB2CE171FD01F1E00542946 /* AppDelegate.swift in Sources */,
 				EA5A8EE51FEA82000054934C /* DataController.swift in Sources */,
+				EA35816D2031902400CC1200 /* LaunchScreenViewController.swift in Sources */,
 				EA05D9371FD5422C00F952D0 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

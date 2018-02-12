@@ -10,26 +10,30 @@ import UIKit
 
 class LaunchScreenViewController: UIViewController {
 
+    @IBOutlet weak var circleImageFour: UIImageView!
+    @IBOutlet weak var circleImageThree: UIImageView!
+    @IBOutlet weak var circleImageOne: UIImageView!
+    @IBOutlet weak var circleImageTwo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setGraphics()
+        view.backgroundColor = UIColor(red: 53.0 / 255.0, green: 57.0 / 255.0, blue: 154.0 / 255.0, alpha: 1.0)
+        perform(#selector(LaunchScreenViewController.showMainMenu), with: nil, afterDelay: 2)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func showMainMenu() {
+        performSegue(withIdentifier: "mainmenu", sender: self)
     }
-    */
+    
+    func setGraphics() {
+        circleImageOne.image = #imageLiteral(resourceName: "circleGraphicOne")
+        circleImageTwo.image = #imageLiteral(resourceName: "circleGraphicTwo")
+        circleImageThree.image = #imageLiteral(resourceName: "circleGraphicOne")
+        circleImageFour.image = #imageLiteral(resourceName: "circleGraphicTwo")
+    }
 
 }

@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import UIKit
+
+extension UIColor {
+    
+    var ttBlueberry: UIColor {
+        return UIColor(red: 53.0 / 255.0, green: 57.0 / 255.0, blue: 154.0 / 255.0, alpha: 1.0)
+    }
+}
+
+// Sample text styles
+
+extension UIFont {
+    
+    @nonobjc class var ttHeader: UIFont {
+        return UIFont.systemFont(ofSize: 24.0, weight: .bold)
+    }
+}
