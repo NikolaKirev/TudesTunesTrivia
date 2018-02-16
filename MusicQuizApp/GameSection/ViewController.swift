@@ -11,15 +11,18 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var timerAnimationView: UIImageView!
+    
     let shapeLayerDisplay = CAShapeLayer()
     let trackLayer = CAShapeLayer()
     let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+    var pulsatingLayer: CAShapeLayer!
     
      //MARK: Timer animation
     func countdownCircle() {
-        //TRACK
         let position = timerAnimationView.center
-        let circularPath = UIBezierPath(arcCenter: position, radius: 50, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: false)
+        let circularPath = UIBezierPath(arcCenter: position, radius: 50, startAngle: (-.pi / 2), endAngle: CGFloat.pi * 2, clockwise: true)
+
+        //TRACK
         trackLayer.path = circularPath.cgPath
         trackLayer.fillColor = UIColor.clear.cgColor
         trackLayer.strokeColor = UIColor.lightGray.cgColor
@@ -38,7 +41,7 @@ class ViewController: UIViewController {
     
     func handleTimer() {
         basicAnimation.toValue = 1
-        basicAnimation.duration = 11
+        basicAnimation.duration = 13.5
         basicAnimation.fillMode = kCAFillModeForwards
         basicAnimation.isRemovedOnCompletion = false
         shapeLayerDisplay.add(basicAnimation, forKey: "")
@@ -75,7 +78,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var questionsLabel: UILabel!
     
-    @IBOutlet weak var nextQuestionButton: UIButton!
+    @IBOutlet weak var nextQuestionButton: UIButton! {
+        didSet {
+            nextQuestionButton?.backgroundColor = UIColor(red: 255.0 / 255.0, green: 33.0 / 255.0, blue: 84.0 / 255.0, alpha: 1.0)
+            nextQuestionButton?.clipsToBounds = true
+            nextQuestionButton?.layer.cornerRadius = 5.0
+        }
+    }
     
     @IBOutlet var answerButtons: [UIButton]!
     
@@ -96,6 +105,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(red: 53.0 / 255.0, green: 57.0 / 255.0, blue: 154.0 / 255.0, alpha: 1.0)
         nextQuestionButton.isHidden = true
         navigationItem.hidesBackButton = true
         navigationController?.isNavigationBarHidden = true
@@ -108,6 +118,8 @@ class ViewController: UIViewController {
     
     //MARK: Selecting Answer
     @IBAction func answerButtonTapped(_ sender: UIButton) {
+        sender.clipsToBounds = true
+        sender.layer.cornerRadius = 5.0
         let correctAnswer = quizData.correctAnswer
         amountOfTouches += 1
         pauseTimer()

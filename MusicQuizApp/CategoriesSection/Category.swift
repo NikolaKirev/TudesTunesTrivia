@@ -13,10 +13,11 @@ class Categories {
     //MARK: Properties
     
     var name: String
+    var image: UIImage
     
     //MARK: Initialization
     
-    init?(name: String) {
+    init?(name: String, image: UIImage) {
         
         // The name must not be empty
         guard !name.isEmpty else {
@@ -25,6 +26,7 @@ class Categories {
         
         // Initialize stored properties.
         self.name = name
+        self.image = image
     }
 }
 

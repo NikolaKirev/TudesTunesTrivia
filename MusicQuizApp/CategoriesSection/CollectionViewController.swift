@@ -16,34 +16,28 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         loadCategories()
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.isPagingEnabled = true
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = UIColor.green
+        collectionView.backgroundColor = UIColor(red: 53.0 / 255.0, green: 57.0 / 255.0, blue: 154.0 / 255.0, alpha: 1.0)
     }
-    
-    var colors: [UIColor]  = [
-        UIColor(red: 237, green: 37, blue: 78),
-        UIColor(red: 249, green: 220, blue: 92),
-        UIColor(red: 194, green: 234, blue: 189),
-        UIColor(red: 1, green: 25, blue: 54),
-        UIColor(red: 255, green: 184, blue: 209)
-    ]
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShareCell", for: indexPath) as! CategoriesCollectionViewCell
         let category = categoriesData[indexPath.row]
         cell.layer.cornerRadius = 7.0
-        cell.backgroundColor = colors[indexPath.row]
+        cell.categoryImage.image = category.image
         cell.categoryName.text = category.name
+        cell.categoryName.font = UIFont.systemFont(ofSize: 25.0, weight: .heavy)
+        cell.categoryName.textColor = UIColor.white
+        cell.categoryName.lineBreakMode = .byWordWrapping
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return colors.count
+        return categoriesData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -53,6 +47,15 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         self.performSegue(withIdentifier: "loadQuestions", sender: self)
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: CategorySectionHeader.viewHeight)
+    }
+    
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CategoryHeader", for: indexPath as IndexPath)
+        return headerView
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let nav = segue.destination as? UINavigationController, let vc = nav.viewControllers.first as? ViewController, let quizData = sharedQuizData.popLast() {
             vc.quizData = quizData
@@ -60,36 +63,27 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     private func loadCategories() {
-        guard let currentMusic = Categories(name: "Current Music") else { fatalError("cannot load category")
+        guard let currentMusic = Categories(name: "Current Music", image: #imageLiteral(resourceName: "eightiesIcon")) else { fatalError("cannot load category")
         }
         
-        guard let ninetiesMusic = Categories(name: "90's Music") else { fatalError("cannot load category")
+        guard let ninetiesMusic = Categories(name: "90's Music", image: #imageLiteral(resourceName: "ninetiesIcon")) else { fatalError("cannot load category")
         }
         
-        guard let noughtiesMusic = Categories(name: "Noughties") else { fatalError("cannot load category")
+        guard let noughtiesMusic = Categories(name: "Noughties", image: #imageLiteral(resourceName: "eightiesIcon")) else { fatalError("cannot load category")
         }
         
-        guard let eightiesMusic = Categories(name: "80's Music") else { fatalError("cannot load category")
+        guard let eightiesMusic = Categories(name: "80's Music", image: #imageLiteral(resourceName: "eightiesIcon")) else { fatalError("cannot load category")
         }
         
-        guard let seventiesMusic = Categories(name: "70's Music") else { fatalError("cannot load category")
+        guard let seventiesMusic = Categories(name: "70's Music", image: #imageLiteral(resourceName: "seventiesIcon")) else { fatalError("cannot load category")
         }
         
-        guard let indieMusic = Categories(name: "Indie Music") else { fatalError("cannot load category")
+        guard let indieMusic = Categories(name: "Indie Music", image: #imageLiteral(resourceName: "indieIcon")) else { fatalError("cannot load category")
         }
         
-        guard let hipHopMusic = Categories(name: "Hip Hop Music") else { fatalError("cannot load category")
+        guard let hipHopMusic = Categories(name: "Hip Hop Music", image: #imageLiteral(resourceName: "eightiesIcon")) else { fatalError("cannot load category")
         }
         
         categoriesData += [currentMusic, ninetiesMusic, noughtiesMusic, eightiesMusic, seventiesMusic, indieMusic, hipHopMusic]
-    }
-}
-
-extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int) {
-        self.init(red: CGFloat(red)/255 ,
-                  green: CGFloat(green)/255,
-                  blue: CGFloat(blue)/255,
-                  alpha: 1.0)
     }
 }

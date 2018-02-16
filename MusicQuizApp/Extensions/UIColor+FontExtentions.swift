@@ -21,6 +21,10 @@ extension UIColor {
 extension UIFont {
     
     @nonobjc class var ttHeader: UIFont {
-        return UIFont.systemFont(ofSize: 24.0, weight: .bold)
+        return UIFont.systemFont(ofSize: 24.0, weight: .semibold)
+    }
+    
+    @nonobjc class var ttNormal: UIFont {
+        return UIFont.systemFont(ofSize: 16.0, weight: .medium)
     }
 }

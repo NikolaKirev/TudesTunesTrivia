@@ -14,11 +14,12 @@ class LaunchScreenViewController: UIViewController {
     @IBOutlet weak var circleImageThree: UIImageView!
     @IBOutlet weak var circleImageOne: UIImageView!
     @IBOutlet weak var circleImageTwo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setGraphics()
         view.backgroundColor = UIColor(red: 53.0 / 255.0, green: 57.0 / 255.0, blue: 154.0 / 255.0, alpha: 1.0)
-        perform(#selector(LaunchScreenViewController.showMainMenu), with: nil, afterDelay: 2)
+        perform(#selector(self.showMainMenu), with: nil, afterDelay: 2)
     }
 
     override func didReceiveMemoryWarning() {
