@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CardsLayout
 
 class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -51,7 +50,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         return CGSize(width: collectionView.bounds.width, height: CategorySectionHeader.viewHeight)
     }
     
-    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: IndexPath) -> UICollectionReusableView {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CategoryHeader", for: indexPath as IndexPath)
         return headerView
     }
