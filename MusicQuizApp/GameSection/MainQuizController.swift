@@ -22,8 +22,10 @@ class MainQuizController: UIViewController {
     @IBOutlet var answerButtons: [UIButton]! {
         didSet {
             for button in answerButtons {
-                button.layer.cornerRadius = 20
-                button.clipsToBounds = true
+                button.layer.cornerRadius = button.bounds.size.height/2
+                button.layer.borderWidth = 3
+                let buttonBorderColor = UIColor(red: 186.0 / 255.0, green: 219.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
+                button.layer.borderColor = buttonBorderColor.cgColor
             }
         }
     }
@@ -133,8 +135,6 @@ class MainQuizController: UIViewController {
     
     //MARK: Selecting Answer
     @IBAction func answerButtonTapped(_ sender: UIButton) {
-        sender.clipsToBounds = true
-        sender.layer.cornerRadius = 5.0
         let correctAnswer = quizData.correctAnswer
         amountOfTouches += 1
         pauseTimer()

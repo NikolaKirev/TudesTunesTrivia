@@ -11,11 +11,7 @@ import UIKit
 
 class QuizCompletedViewController: UIViewController {
     
-    @IBOutlet weak var correctAnswersLabel: UILabel! {
-        didSet {
-            correctAnswersLabel.text.countFromZero(to: correctAnswers, duration: 5)
-        }
-    }
+    @IBOutlet weak var correctAnswersLabel: UILabel! 
     
     @IBOutlet weak var homeButton: UIButton! {
         didSet {
