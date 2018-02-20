@@ -9,11 +9,6 @@
 import UIKit
 
 class LaunchScreenViewController: UIViewController {
-
-    @IBOutlet weak var circleImageFour: UIImageView!
-    @IBOutlet weak var circleImageThree: UIImageView!
-    @IBOutlet weak var circleImageOne: UIImageView!
-    @IBOutlet weak var circleImageTwo: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +26,21 @@ class LaunchScreenViewController: UIViewController {
     }
     
     func setGraphics() {
-        circleImageOne.image = #imageLiteral(resourceName: "circleGraphicOne")
-        circleImageTwo.image = #imageLiteral(resourceName: "circleGraphicTwo")
-        circleImageThree.image = #imageLiteral(resourceName: "circleGraphicOne")
-        circleImageFour.image = #imageLiteral(resourceName: "circleGraphicTwo")
+        let circleImageOne = UIImageView()
+        let circleImageTwo = UIImageView()
+        let circleImageThree = UIImageView()
+        let circleImageFour = UIImageView()
+        addBackgroundImage(backgroundImageView: circleImageOne, backgroundImage: #imageLiteral(resourceName: "circleGraphicOne"), position: CGRect(x: 304, y: 82, width: 142, height: 142))
+        addBackgroundImage(backgroundImageView: circleImageTwo, backgroundImage: #imageLiteral(resourceName: "circleGraphicTwo"), position: CGRect(x: -216, y: 54, width: 431, height: 431))
+        addBackgroundImage(backgroundImageView: circleImageThree, backgroundImage: #imageLiteral(resourceName: "circleGraphicOne"), position: CGRect(x: 160, y: 326, width: 431, height: 431))
+        addBackgroundImage(backgroundImageView: circleImageFour, backgroundImage: #imageLiteral(resourceName: "circleGraphicTwo"), position: CGRect(x: -94, y: 570, width: 188, height: 188))
+    }
+    
+    func addBackgroundImage(backgroundImageView: UIImageView, backgroundImage: UIImage, position: CGRect) {
+        backgroundImageView.image = backgroundImage
+        backgroundImageView.frame = position
+        backgroundImageView.frame.size.height / 2
+        view.addSubview(backgroundImageView)
     }
 
 }

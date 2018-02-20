@@ -20,7 +20,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         collectionView.delegate = self
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = UIColor(red: 53.0 / 255.0, green: 57.0 / 255.0, blue: 154.0 / 255.0, alpha: 1.0)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -56,7 +55,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let nav = segue.destination as? UINavigationController, let vc = nav.viewControllers.first as? ViewController, let quizData = sharedQuizData.popLast() {
+        if let nav = segue.destination as? UINavigationController, let vc = nav.viewControllers.first as? MainQuizController, let quizData = sharedQuizData.popLast() {
             vc.quizData = quizData
         }
     }

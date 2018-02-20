@@ -10,7 +10,7 @@ import UIKit
 import FacebookLogin
 import FBSDKLoginKit
 
-class LaunchViewController: UIViewController {
+class StartMenuViewController: UIViewController {
     
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var appTitle: UILabel!
@@ -40,6 +40,7 @@ class LaunchViewController: UIViewController {
         if (FBSDKAccessToken.current()) != nil {
             getFBUserData()
         }
+        self.profilePicture.frame = CGRect(x: 275, y: 79, width: 50, height: 50)
         self.profilePicture.layer.cornerRadius = self.profilePicture.frame.size.height / 2;
         self.profilePicture.layer.masksToBounds = true
         self.profilePicture.layer.borderWidth = 0;
