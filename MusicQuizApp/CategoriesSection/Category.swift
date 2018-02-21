@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Categories {
+class Category {
     
     //MARK: Properties
     

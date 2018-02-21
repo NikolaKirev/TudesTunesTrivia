@@ -22,7 +22,7 @@ class LaunchScreenViewController: UIViewController {
     }
     
     @objc func showMainMenu() {
-        performSegue(withIdentifier: "mainmenu", sender: self)
+        performSegue(withIdentifier: SegueIdentifiers.StartMenu.rawValue, sender: self)
     }
     
     func setGraphics() {

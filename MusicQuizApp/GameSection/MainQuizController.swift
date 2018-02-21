@@ -33,8 +33,7 @@ class MainQuizController: UIViewController {
     @IBOutlet weak var nextQuestionButton: UIButton! {
         didSet {
             nextQuestionButton?.backgroundColor = UIColor(red: 255.0 / 255.0, green: 33.0 / 255.0, blue: 84.0 / 255.0, alpha: 1.0)
-            nextQuestionButton?.clipsToBounds = true
-            nextQuestionButton?.layer.cornerRadius = 5.0
+            nextQuestionButton?.layer.cornerRadius = (nextQuestionButton?.bounds.size.height)!/2
         }
     }
     
@@ -155,7 +154,7 @@ class MainQuizController: UIViewController {
         if quizData == nil {
             loadQuizCompletedView()
         } else {
-            guard let nextViewController = storyboard?.instantiateViewController(withIdentifier: "QuestionViewController") as? MainQuizController else {
+            guard let nextViewController = storyboard?.instantiateViewController(withIdentifier: NewStoryboardIdentifiers.NextQuizView.rawValue) as? MainQuizController else {
                 fatalError("no vc to load")
             }
             nextViewController.quizData = quizData
@@ -177,7 +176,7 @@ class MainQuizController: UIViewController {
     }
     
     func loadQuizCompletedView() {
-        let completedViewController = storyboard?.instantiateViewController(withIdentifier: "QuizCompletedViewController") as! QuizCompletedViewController
+        let completedViewController = storyboard?.instantiateViewController(withIdentifier: NewStoryboardIdentifiers.QuizCompleteView.rawValue) as! QuizCompletedViewController
         completedViewController.correctAnswers = self.amountOfCorrectAnswers
         navigationController?.pushViewController(completedViewController, animated: true)
     }

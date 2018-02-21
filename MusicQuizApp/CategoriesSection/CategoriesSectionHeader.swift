@@ -1,8 +1,8 @@
 //
-//  CategorySectionHeader.swift
+//  CategoriesSectionHeader.swift
 //  MusicQuizApp
 //
-//  Created by John Tudor on 16/02/2018.
+//  Created by John Tudor on 21/02/2018.
 //  Copyright © 2018 Jack Tudor. All rights reserved.
 //
 

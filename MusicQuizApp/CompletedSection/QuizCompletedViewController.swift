@@ -11,7 +11,9 @@ import UIKit
 
 class QuizCompletedViewController: UIViewController {
     
-    @IBOutlet weak var correctAnswersLabel: UILabel! 
+    var correctAnswers: Int = 0
+    
+    @IBOutlet weak var correctAnswersLabel: UILabel!
     
     @IBOutlet weak var homeButton: UIButton! {
         didSet {
@@ -31,9 +33,12 @@ class QuizCompletedViewController: UIViewController {
     
     override func viewDidLoad() {
         view.backgroundColor = UIColor(red: 53.0 / 255.0, green: 57.0 / 255.0, blue: 154.0 / 255.0, alpha: 1.0)
+        correctAnswersDisplayed()
     }
     
-    var correctAnswers: Int = 0
+    func correctAnswersDisplayed() {
+        correctAnswersLabel.text = "Total correct answers: \(correctAnswers)"
+    }
 
 }
 
