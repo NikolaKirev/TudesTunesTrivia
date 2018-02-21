@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class CollectionViewController: UIViewController {
     
     var categoriesData = [Category]()
     
@@ -20,29 +20,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         collectionView.delegate = self
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         collectionView.showsHorizontalScrollIndicator = false
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewIdentifiers.CollectionViewCell.rawValue, for: indexPath) as! CategoriesCollectionViewCell
-        let category = categoriesData[indexPath.row]
-        cell.layer.cornerRadius = 7.0
-        cell.categoryImage.image = category.image
-        cell.categoryName.text = category.name
-        cell.categoryName.font = UIFont.systemFont(ofSize: 25.0, weight: .heavy)
-        cell.categoryName.textColor = UIColor.white
-        cell.categoryName.lineBreakMode = .byWordWrapping
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoriesData.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as? CategoriesCollectionViewCell
-        let extractString = cell?.categoryName.text
-        sharedQuizData = QuizData.loadInQuizData(forFileNamed: extractString ?? "")
-        self.performSegue(withIdentifier: SegueIdentifiers.QuizScreen.rawValue, sender: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -83,5 +60,34 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         }
         
         categoriesData += [currentMusic, ninetiesMusic, noughtiesMusic, eightiesMusic, seventiesMusic, indieMusic, hipHopMusic]
+    }
+}
+
+extension CollectionViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewIdentifiers.CollectionViewCell.rawValue, for: indexPath) as! CategoriesCollectionViewCell
+        let category = categoriesData[indexPath.row]
+        cell.layer.cornerRadius = 7.0
+        cell.categoryImage.image = category.image
+        cell.categoryName.text = category.name
+        cell.categoryName.font = UIFont.systemFont(ofSize: 25.0, weight: .heavy)
+        cell.categoryName.textColor = UIColor.white
+        cell.categoryName.lineBreakMode = .byWordWrapping
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categoriesData.count
+    }
+}
+
+extension CollectionViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? CategoriesCollectionViewCell
+        let extractString = cell?.categoryName.text
+        sharedQuizData = QuizData.loadInQuizData(forFileNamed: extractString ?? "")
+        self.performSegue(withIdentifier: SegueIdentifiers.QuizScreen.rawValue, sender: self)
     }
 }
