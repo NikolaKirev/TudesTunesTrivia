@@ -66,14 +66,12 @@ class MainQuizController: UIViewController {
         super.viewDidLoad()
         setBackgroundImages()
         nextQuestionButton.isHidden = true
-        navigationItem.hidesBackButton = true
-        navigationController?.isNavigationBarHidden = true
+        setNavigationProperties()
         displayData(question: quizData.questionData, answersData: quizData.answersData)
     }
     
      //MARK: Timer animation
     func createCountdownCircle() {
-        
         let position = CGPoint(x: coundownAnimationView.bounds.midX, y: coundownAnimationView.bounds.midY)
         let circularPath = UIBezierPath(arcCenter: position, radius: 50, startAngle: (-.pi / 2), endAngle: CGFloat.pi * 2, clockwise: true)
         
@@ -227,6 +225,11 @@ class MainQuizController: UIViewController {
     
     private func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(MainQuizController.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    private func setNavigationProperties() {
+        navigationItem.hidesBackButton = true
+        navigationController?.isNavigationBarHidden = true
     }
 
 }

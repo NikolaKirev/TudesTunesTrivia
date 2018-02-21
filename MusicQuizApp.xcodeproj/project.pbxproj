@@ -129,12 +129,12 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		EA5A8EE31FEA81E70054934C /* QuestionSection */ = {
+		EA5A8EE31FEA81E70054934C /* QuestionDataController */ = {
 			isa = PBXGroup;
 			children = (
 				EA5A8EE41FEA82000054934C /* DataController.swift */,
 			);
-			path = QuestionSection;
+			path = QuestionDataController;
 			sourceTree = "<group>";
 		};
 		EA601CB51FFE9AF90090A65D /* CompletedSection */ = {
@@ -171,7 +171,7 @@
 				EA35816E203190D600CC1200 /* Extensions */,
 				EA0704A72007DD6F002592A2 /* QuizData */,
 				EA601CB51FFE9AF90090A65D /* CompletedSection */,
-				EA5A8EE31FEA81E70054934C /* QuestionSection */,
+				EA5A8EE31FEA81E70054934C /* QuestionDataController */,
 				EA05D9391FD546FE00F952D0 /* GameSection */,
 				EA05D9381FD546EB00F952D0 /* StartSection */,
 				EA05D9351FD5420C00F952D0 /* CategoriesSection */,

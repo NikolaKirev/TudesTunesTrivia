@@ -86,9 +86,4 @@ class StartMenuViewController: UIViewController {
             print("Token is still valid")
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
