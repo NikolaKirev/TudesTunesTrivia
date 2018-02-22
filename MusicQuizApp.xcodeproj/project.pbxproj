@@ -95,21 +95,21 @@
 			path = StartSection;
 			sourceTree = "<group>";
 		};
-		EA05D9391FD546FE00F952D0 /* GameSection */ = {
+		EA05D9391FD546FE00F952D0 /* QuizGameSection */ = {
 			isa = PBXGroup;
 			children = (
 				EAB2CE181FD01F1F00542946 /* MainQuizController.swift */,
 			);
-			path = GameSection;
+			path = QuizGameSection;
 			sourceTree = "<group>";
 		};
-		EA0704A72007DD6F002592A2 /* QuizData */ = {
+		EA0704A72007DD6F002592A2 /* QuizDataFiles */ = {
 			isa = PBXGroup;
 			children = (
 				EAB2CE2F1FD096E400542946 /* Noughties.plist */,
 				EA0704A82007DD94002592A2 /* Current Music.plist */,
 			);
-			path = QuizData;
+			path = QuizDataFiles;
 			sourceTree = "<group>";
 		};
 		EA35816E203190D600CC1200 /* Extensions */ = {
@@ -137,13 +137,13 @@
 			path = QuestionDataController;
 			sourceTree = "<group>";
 		};
-		EA601CB51FFE9AF90090A65D /* CompletedSection */ = {
+		EA601CB51FFE9AF90090A65D /* CompletedQuizView */ = {
 			isa = PBXGroup;
 			children = (
 				EA601CB61FFE9B1B0090A65D /* QuizCompletedViewController.swift */,
 				EA3F72EF203C14380087FA8E /* CountingLabel.swift */,
 			);
-			path = CompletedSection;
+			path = CompletedQuizView;
 			sourceTree = "<group>";
 		};
 		EAB2CE0A1FD01F1E00542946 = {
@@ -169,10 +169,10 @@
 			children = (
 				EA3F72F1203D6C490087FA8E /* Helpers */,
 				EA35816E203190D600CC1200 /* Extensions */,
-				EA0704A72007DD6F002592A2 /* QuizData */,
-				EA601CB51FFE9AF90090A65D /* CompletedSection */,
+				EA0704A72007DD6F002592A2 /* QuizDataFiles */,
+				EA601CB51FFE9AF90090A65D /* CompletedQuizView */,
 				EA5A8EE31FEA81E70054934C /* QuestionDataController */,
-				EA05D9391FD546FE00F952D0 /* GameSection */,
+				EA05D9391FD546FE00F952D0 /* QuizGameSection */,
 				EA05D9381FD546EB00F952D0 /* StartSection */,
 				EA05D9351FD5420C00F952D0 /* CategoriesSection */,
 				EAB2CE161FD01F1E00542946 /* AppDelegate.swift */,

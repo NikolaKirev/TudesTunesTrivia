@@ -54,13 +54,11 @@ class MainQuizController: UIViewController {
     
     var quizData: QuizData!
     
+    // Countdown layers
     let shapeLayerDisplay = CAShapeLayer()
-    
+    let pulsatingLayer = CAShapeLayer()
     let trackLayer = CAShapeLayer()
-    
     let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-    
-    var pulsatingLayer: CAShapeLayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,43 +70,23 @@ class MainQuizController: UIViewController {
     
      //MARK: Timer animation
     func createCountdownCircle() {
-        let position = CGPoint(x: coundownAnimationView.bounds.midX, y: coundownAnimationView.bounds.midY)
-        let circularPath = UIBezierPath(arcCenter: position, radius: 50, startAngle: (-.pi / 2), endAngle: CGFloat.pi * 2, clockwise: true)
-        
         //PULSE
-        pulsatingLayer = CAShapeLayer()
-        
-        pulsatingLayer.path = circularPath.cgPath
         let pulseColor = UIColor(red: 186.0 / 255.0, green: 219.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
-        pulsatingLayer.fillColor = pulseColor.cgColor
-        pulsatingLayer.strokeColor = UIColor.clear.cgColor
-        pulsatingLayer.lineWidth = 10
-        pulsatingLayer.frame = coundownAnimationView.bounds
+        countdownProperties(layer: pulsatingLayer, strokeColor: UIColor.clear.cgColor, fillColor: pulseColor.cgColor, lineWidth: 10, framePosition: coundownAnimationView.bounds)
         coundownAnimationView.layer.addSublayer(pulsatingLayer)
 
         //TRACK
-        trackLayer.path = circularPath.cgPath
-        trackLayer.fillColor = UIColor.clear.cgColor
-        trackLayer.strokeColor = UIColor.purple.cgColor
-        trackLayer.lineWidth = 3
-        trackLayer.frame = coundownAnimationView.bounds
+        countdownProperties(layer: trackLayer, strokeColor: UIColor.purple.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: 3, framePosition: coundownAnimationView.bounds)
         coundownAnimationView.layer.addSublayer(trackLayer)
 
         //CIRCLE
-        shapeLayerDisplay.path = circularPath.cgPath
-        shapeLayerDisplay.strokeColor = UIColor.purple.cgColor
+        countdownProperties(layer: shapeLayerDisplay, strokeColor: UIColor.purple.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: 10, framePosition: coundownAnimationView.bounds)
         shapeLayerDisplay.strokeEnd = 0
-        shapeLayerDisplay.fillColor = UIColor.clear.cgColor
         shapeLayerDisplay.lineCap = kCALineCapRound
-        shapeLayerDisplay.lineWidth = 10
-        shapeLayerDisplay.frame = coundownAnimationView.bounds
         coundownAnimationView.layer.addSublayer(shapeLayerDisplay)
         
-        countdownLabel.frame = coundownAnimationView.bounds
-        countdownLabel.textAlignment = .center
-        countdownLabel.numberOfLines = 1
-        countdownLabel.textColor = UIColor(red: 53.0 / 255.0, green: 57.0 / 255.0, blue: 154.0 / 255.0, alpha: 1.0)
-        countdownLabel.font = UIFont.systemFont(ofSize: 25.0, weight: .heavy)
+        //Countdown Label
+        buildCountdownLabel()
         coundownAnimationView.addSubview(countdownLabel)
     }
     
@@ -230,6 +208,24 @@ class MainQuizController: UIViewController {
     private func setNavigationProperties() {
         navigationItem.hidesBackButton = true
         navigationController?.isNavigationBarHidden = true
+    }
+    
+    private func buildCountdownLabel() {
+    countdownLabel.frame = coundownAnimationView.bounds
+    countdownLabel.textAlignment = .center
+    countdownLabel.numberOfLines = 1
+    countdownLabel.textColor = UIColor(red: 53.0 / 255.0, green: 57.0 / 255.0, blue: 154.0 / 255.0, alpha: 1.0)
+    countdownLabel.font = UIFont.systemFont(ofSize: 25.0, weight: .heavy)
+    }
+    
+    private func countdownProperties(layer: CAShapeLayer, strokeColor: CGColor, fillColor: CGColor, lineWidth: CGFloat, framePosition: CGRect) {
+        let position = CGPoint(x: coundownAnimationView.bounds.midX, y: coundownAnimationView.bounds.midY)
+        let circularPath = UIBezierPath(arcCenter: position, radius: 50, startAngle: (-.pi / 2), endAngle: CGFloat.pi * 2, clockwise: true)
+        layer.path = circularPath.cgPath
+        layer.strokeColor = strokeColor
+        layer.fillColor = fillColor
+        layer.lineWidth = lineWidth
+        layer.frame = framePosition
     }
 
 }
