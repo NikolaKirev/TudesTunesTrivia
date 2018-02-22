@@ -16,7 +16,7 @@ class AnswerButton: UIButton {
     
     private func setup() {
         layer.borderWidth = 3
-        let buttonBorderColor = UIColor(red: 186.0 / 255.0, green: 219.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
+        let buttonBorderColor = UIColor.ttPowderBlue
         layer.borderColor = buttonBorderColor.cgColor
     }
     

@@ -23,7 +23,7 @@ class StartMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 53.0 / 255.0, green: 57.0 / 255.0, blue: 154.0 / 255.0, alpha: 1.0)
+        view.backgroundColor = UIColor.ttBlueberry
         startButtonProperties()
         facebookLoginProperties()
     }
@@ -49,7 +49,7 @@ class StartMenuViewController: UIViewController {
     
     func startButtonProperties() {
         let button = startQuizButton
-        button?.backgroundColor = UIColor(red: 255.0 / 255.0, green: 33.0 / 255.0, blue: 84.0 / 255.0, alpha: 1.0)
+        button?.backgroundColor = UIColor.ttReddishPink
         button?.clipsToBounds = true
         button?.layer.cornerRadius = 5.0
     }

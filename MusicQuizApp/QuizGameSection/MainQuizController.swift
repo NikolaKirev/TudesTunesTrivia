@@ -23,7 +23,7 @@ class MainQuizController: UIViewController, CountdownViewDelegate {
     
     @IBOutlet weak var nextQuestionButton: UIButton! {
         didSet {
-            nextQuestionButton?.backgroundColor = UIColor(red: 255.0 / 255.0, green: 33.0 / 255.0, blue: 84.0 / 255.0, alpha: 1.0)
+            nextQuestionButton?.backgroundColor = UIColor.ttReddishPink
             nextQuestionButton?.layer.cornerRadius = (nextQuestionButton?.bounds.size.height)!/2
         }
     }
@@ -52,11 +52,11 @@ class MainQuizController: UIViewController, CountdownViewDelegate {
         disableButtons()
         coundownAnimationView.stop()
         if sender.title(for: .normal) == correctAnswer {
-            sender.backgroundColor = UIColor.green
+            sender.backgroundColor = UIColor.ttWeirdGreen
             nextQuestionButton.isHidden = false
             self.amountOfCorrectAnswers += 1
         } else {
-            sender.backgroundColor = UIColor.red
+            sender.backgroundColor = UIColor.ttRedOrange
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             nextQuestionButton.isHidden = false
         }

@@ -58,7 +58,11 @@ class CountdownView: UIView {
     
     //MARK: Timer
     private var seconds = 10
-    private var timer : Timer?
+    private var timer : Timer? = nil {
+        willSet {
+            timer?.invalidate()
+        }
+    }
     
     @objc private func updateTimer() {
         if seconds < 1 {
@@ -72,7 +76,7 @@ class CountdownView: UIView {
 
     
     private func setPulseLayer() {
-        let pulseColor = UIColor(red: 186.0 / 255.0, green: 219.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
+        let pulseColor = UIColor.ttPowderBlue
         setCountdownProperties(layer: pulsatingLayer, strokeColor: UIColor.clear.cgColor, fillColor: pulseColor.cgColor, lineWidth: 10, framePosition: bounds)
         layer.addSublayer(pulsatingLayer)
     }
@@ -92,7 +96,7 @@ class CountdownView: UIView {
     private func setupCountdownLabel() {
         countdownLabel.textAlignment = .center
         countdownLabel.numberOfLines = 1
-        countdownLabel.textColor = UIColor(red: 53.0 / 255.0, green: 57.0 / 255.0, blue: 154.0 / 255.0, alpha: 1.0)
+        countdownLabel.textColor = UIColor.ttBlueberry
         countdownLabel.font = UIFont.systemFont(ofSize: 25.0, weight: .heavy)
         addSubview(countdownLabel)
         countdownLabel.translatesAutoresizingMaskIntoConstraints = false
