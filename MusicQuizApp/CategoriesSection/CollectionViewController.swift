@@ -68,12 +68,7 @@ extension CollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewIdentifiers.CollectionViewCell.rawValue, for: indexPath) as! CategoriesCollectionViewCell
         let category = categoriesData[indexPath.row]
-        cell.layer.cornerRadius = 7.0
-        cell.categoryImage.image = category.image
-        cell.categoryName.text = category.name
-        cell.categoryName.font = UIFont.systemFont(ofSize: 25.0, weight: .heavy)
-        cell.categoryName.textColor = UIColor.white
-        cell.categoryName.lineBreakMode = .byWordWrapping
+        cell.configure(with: category)
         return cell
     }
     

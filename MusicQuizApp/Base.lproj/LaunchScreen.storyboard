@@ -17,7 +17,31 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.91993422938942548" green="0.98093257447871007" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="circleGraphicLargeLeft" translatesAutoresizingMaskIntoConstraints="NO" id="1zX-Zu-8vt">
+                                <rect key="frame" x="0.0" y="29" width="200" height="400"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleGraphicSmallRight" translatesAutoresizingMaskIntoConstraints="NO" id="qKo-rz-GW0">
+                                <rect key="frame" x="304" y="72.5" width="71" height="142"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="circleGraphicLargeRight" translatesAutoresizingMaskIntoConstraints="NO" id="wPp-2R-R4o">
+                                <rect key="frame" x="174" y="277" width="200" height="400"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="circleGraphicSmallLeft" translatesAutoresizingMaskIntoConstraints="NO" id="FXr-SW-ZSs">
+                                <rect key="frame" x="0.0" y="472" width="71" height="142"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20784313725490194" green="0.22352941176470587" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qKo-rz-GW0" secondAttribute="trailing" id="H3k-0P-cVC"/>
+                            <constraint firstItem="FXr-SW-ZSs" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="200" id="HP7-4D-Ein"/>
+                            <constraint firstItem="FXr-SW-ZSs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YBj-of-LdF"/>
+                            <constraint firstItem="1zX-Zu-8vt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eMF-SJ-WGW"/>
+                            <constraint firstItem="qKo-rz-GW0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-200" id="kPu-cS-N4t"/>
+                            <constraint firstItem="wPp-2R-R4o" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="1" id="qDa-SD-Pfb"/>
+                            <constraint firstItem="1zX-Zu-8vt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="woh-lj-DXf"/>
+                            <constraint firstItem="wPp-2R-R4o" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="133.5" id="xzx-fj-VPS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -26,4 +50,10 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circleGraphicLargeLeft" width="215" height="431"/>
+        <image name="circleGraphicLargeRight" width="215" height="431"/>
+        <image name="circleGraphicSmallLeft" width="94" height="188"/>
+        <image name="circleGraphicSmallRight" width="71" height="142"/>
+    </resources>
 </document>
