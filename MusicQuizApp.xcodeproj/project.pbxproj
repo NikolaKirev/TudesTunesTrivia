@@ -15,6 +15,9 @@
 		EA3F72F7203D733D0087FA8E /* CategoriesSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3F72F6203D733D0087FA8E /* CategoriesSectionHeader.swift */; };
 		EA55E00C203F389A00D5D5F6 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55E00B203F389A00D5D5F6 /* AnswerButton.swift */; };
 		EA55E00E203F3AD500D5D5F6 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55E00D203F3AD500D5D5F6 /* CountdownView.swift */; };
+		EA55E010203F56DC00D5D5F6 /* NextQuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55E00F203F56DC00D5D5F6 /* NextQuestionButton.swift */; };
+		EA55E013203F581900D5D5F6 /* QuestionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55E012203F581900D5D5F6 /* QuestionLabel.swift */; };
+		EA55E016203F8B7D00D5D5F6 /* 90's Music.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA55E015203F8B7D00D5D5F6 /* 90's Music.plist */; };
 		EA5A8EE51FEA82000054934C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A8EE41FEA82000054934C /* DataController.swift */; };
 		EA5C2B9C2025E6EC0000995E /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C2B9B2025E6EC0000995E /* CategoriesCollectionViewCell.swift */; };
 		EA5C2B9E202888B50000995E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C2B9D202888B50000995E /* CollectionViewController.swift */; };
@@ -42,6 +45,9 @@
 		EA3F72F6203D733D0087FA8E /* CategoriesSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSectionHeader.swift; sourceTree = "<group>"; };
 		EA55E00B203F389A00D5D5F6 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		EA55E00D203F3AD500D5D5F6 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		EA55E00F203F56DC00D5D5F6 /* NextQuestionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextQuestionButton.swift; sourceTree = "<group>"; };
+		EA55E012203F581900D5D5F6 /* QuestionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLabel.swift; sourceTree = "<group>"; };
+		EA55E015203F8B7D00D5D5F6 /* 90's Music.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "90's Music.plist"; sourceTree = "<group>"; };
 		EA5A8EE41FEA82000054934C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		EA5C2B9B2025E6EC0000995E /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA5C2B9D202888B50000995E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -81,10 +87,9 @@
 		EA05D9351FD5420C00F952D0 /* CategoriesSection */ = {
 			isa = PBXGroup;
 			children = (
-				EA05D9361FD5422C00F952D0 /* Category.swift */,
-				EA5C2B9B2025E6EC0000995E /* CategoriesCollectionViewCell.swift */,
 				EA5C2B9D202888B50000995E /* CollectionViewController.swift */,
-				EA3F72F6203D733D0087FA8E /* CategoriesSectionHeader.swift */,
+				EA05D9361FD5422C00F952D0 /* Category.swift */,
+				EA55E014203F638300D5D5F6 /* CategoriesViewObjects */,
 			);
 			path = CategoriesSection;
 			sourceTree = "<group>";
@@ -101,8 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				EAB2CE181FD01F1F00542946 /* MainQuizController.swift */,
-				EA55E00B203F389A00D5D5F6 /* AnswerButton.swift */,
-				EA55E00D203F3AD500D5D5F6 /* CountdownView.swift */,
+				EA55E011203F57C800D5D5F6 /* QuizGameViewObjects */,
 			);
 			path = QuizGameSection;
 			sourceTree = "<group>";
@@ -112,6 +116,7 @@
 			children = (
 				EAB2CE2F1FD096E400542946 /* Noughties.plist */,
 				EA0704A82007DD94002592A2 /* Current Music.plist */,
+				EA55E015203F8B7D00D5D5F6 /* 90's Music.plist */,
 			);
 			path = QuizDataFiles;
 			sourceTree = "<group>";
@@ -131,6 +136,26 @@
 				EA3F72F2203D6C590087FA8E /* StoryboardIdentifiers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EA55E011203F57C800D5D5F6 /* QuizGameViewObjects */ = {
+			isa = PBXGroup;
+			children = (
+				EA55E00D203F3AD500D5D5F6 /* CountdownView.swift */,
+				EA55E00B203F389A00D5D5F6 /* AnswerButton.swift */,
+				EA55E00F203F56DC00D5D5F6 /* NextQuestionButton.swift */,
+				EA55E012203F581900D5D5F6 /* QuestionLabel.swift */,
+			);
+			path = QuizGameViewObjects;
+			sourceTree = "<group>";
+		};
+		EA55E014203F638300D5D5F6 /* CategoriesViewObjects */ = {
+			isa = PBXGroup;
+			children = (
+				EA3F72F6203D733D0087FA8E /* CategoriesSectionHeader.swift */,
+				EA5C2B9B2025E6EC0000995E /* CategoriesCollectionViewCell.swift */,
+			);
+			path = CategoriesViewObjects;
 			sourceTree = "<group>";
 		};
 		EA5A8EE31FEA81E70054934C /* QuestionDataController */ = {
@@ -171,14 +196,14 @@
 		EAB2CE151FD01F1E00542946 /* MusicQuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				EA05D9381FD546EB00F952D0 /* StartSection */,
+				EA05D9391FD546FE00F952D0 /* QuizGameSection */,
+				EA601CB51FFE9AF90090A65D /* CompletedQuizView */,
+				EA05D9351FD5420C00F952D0 /* CategoriesSection */,
 				EA3F72F1203D6C490087FA8E /* Helpers */,
 				EA35816E203190D600CC1200 /* Extensions */,
 				EA0704A72007DD6F002592A2 /* QuizDataFiles */,
-				EA601CB51FFE9AF90090A65D /* CompletedQuizView */,
 				EA5A8EE31FEA81E70054934C /* QuestionDataController */,
-				EA05D9391FD546FE00F952D0 /* QuizGameSection */,
-				EA05D9381FD546EB00F952D0 /* StartSection */,
-				EA05D9351FD5420C00F952D0 /* CategoriesSection */,
 				EAB2CE161FD01F1E00542946 /* AppDelegate.swift */,
 				EAB2CE1A1FD01F1F00542946 /* Main.storyboard */,
 				EAB2CE1D1FD01F1F00542946 /* Assets.xcassets */,
@@ -261,6 +286,7 @@
 			files = (
 				EAB2CE211FD01F1F00542946 /* LaunchScreen.storyboard in Resources */,
 				EAB2CE1E1FD01F1F00542946 /* Assets.xcassets in Resources */,
+				EA55E016203F8B7D00D5D5F6 /* 90's Music.plist in Resources */,
 				EAB2CE301FD096E400542946 /* Noughties.plist in Resources */,
 				EAB2CE1C1FD01F1F00542946 /* Main.storyboard in Resources */,
 				EA0704A92007DD94002592A2 /* Current Music.plist in Resources */,
@@ -347,6 +373,8 @@
 				EAB2CE191FD01F1F00542946 /* MainQuizController.swift in Sources */,
 				EAB2CE291FD0486A00542946 /* StartMenuViewController.swift in Sources */,
 				EA55E00C203F389A00D5D5F6 /* AnswerButton.swift in Sources */,
+				EA55E013203F581900D5D5F6 /* QuestionLabel.swift in Sources */,
+				EA55E010203F56DC00D5D5F6 /* NextQuestionButton.swift in Sources */,
 				EA3F72F3203D6C590087FA8E /* StoryboardIdentifiers.swift in Sources */,
 				EA5C2B9E202888B50000995E /* CollectionViewController.swift in Sources */,
 				EA601CB71FFE9B1B0090A65D /* QuizCompletedViewController.swift in Sources */,
@@ -493,6 +521,7 @@
 			baseConfigurationReference = 0A83176D66DBE035393183EE /* Pods-MusicQuizApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = H2B8SKE378;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -515,6 +544,7 @@
 			baseConfigurationReference = A78DFA0E3F424535EB0D9040 /* Pods-MusicQuizApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = H2B8SKE378;
 				FRAMEWORK_SEARCH_PATHS = (

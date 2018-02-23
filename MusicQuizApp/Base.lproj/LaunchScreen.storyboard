@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="circleGraphicLargeLeft" translatesAutoresizingMaskIntoConstraints="NO" id="1zX-Zu-8vt">
-                                <rect key="frame" x="0.0" y="29" width="200" height="400"/>
+                                <rect key="frame" x="0.0" y="28" width="200" height="400"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleGraphicSmallRight" translatesAutoresizingMaskIntoConstraints="NO" id="qKo-rz-GW0">
                                 <rect key="frame" x="304" y="72.5" width="71" height="142"/>
