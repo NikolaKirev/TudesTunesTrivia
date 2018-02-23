@@ -18,6 +18,8 @@
 		EA55E010203F56DC00D5D5F6 /* NextQuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55E00F203F56DC00D5D5F6 /* NextQuestionButton.swift */; };
 		EA55E013203F581900D5D5F6 /* QuestionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55E012203F581900D5D5F6 /* QuestionLabel.swift */; };
 		EA55E016203F8B7D00D5D5F6 /* 90's Music.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA55E015203F8B7D00D5D5F6 /* 90's Music.plist */; };
+		EA55E019204011EB00D5D5F6 /* BackToCategoriesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55E018204011EB00D5D5F6 /* BackToCategoriesButton.swift */; };
+		EA55E01B2040128000D5D5F6 /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55E01A2040128000D5D5F6 /* HomeButton.swift */; };
 		EA5A8EE51FEA82000054934C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A8EE41FEA82000054934C /* DataController.swift */; };
 		EA5C2B9C2025E6EC0000995E /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C2B9B2025E6EC0000995E /* CategoriesCollectionViewCell.swift */; };
 		EA5C2B9E202888B50000995E /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5C2B9D202888B50000995E /* CollectionViewController.swift */; };
@@ -48,6 +50,8 @@
 		EA55E00F203F56DC00D5D5F6 /* NextQuestionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextQuestionButton.swift; sourceTree = "<group>"; };
 		EA55E012203F581900D5D5F6 /* QuestionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLabel.swift; sourceTree = "<group>"; };
 		EA55E015203F8B7D00D5D5F6 /* 90's Music.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "90's Music.plist"; sourceTree = "<group>"; };
+		EA55E018204011EB00D5D5F6 /* BackToCategoriesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToCategoriesButton.swift; sourceTree = "<group>"; };
+		EA55E01A2040128000D5D5F6 /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
 		EA5A8EE41FEA82000054934C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		EA5C2B9B2025E6EC0000995E /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA5C2B9D202888B50000995E /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +162,16 @@
 			path = CategoriesViewObjects;
 			sourceTree = "<group>";
 		};
+		EA55E017204011CA00D5D5F6 /* CompletedQuizViewObjects */ = {
+			isa = PBXGroup;
+			children = (
+				EA3F72EF203C14380087FA8E /* CountingLabel.swift */,
+				EA55E018204011EB00D5D5F6 /* BackToCategoriesButton.swift */,
+				EA55E01A2040128000D5D5F6 /* HomeButton.swift */,
+			);
+			path = CompletedQuizViewObjects;
+			sourceTree = "<group>";
+		};
 		EA5A8EE31FEA81E70054934C /* QuestionDataController */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				EA601CB61FFE9B1B0090A65D /* QuizCompletedViewController.swift */,
-				EA3F72EF203C14380087FA8E /* CountingLabel.swift */,
+				EA55E017204011CA00D5D5F6 /* CompletedQuizViewObjects */,
 			);
 			path = CompletedQuizView;
 			sourceTree = "<group>";
@@ -367,7 +381,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA55E01B2040128000D5D5F6 /* HomeButton.swift in Sources */,
 				EA3F72F7203D733D0087FA8E /* CategoriesSectionHeader.swift in Sources */,
+				EA55E019204011EB00D5D5F6 /* BackToCategoriesButton.swift in Sources */,
 				EA5C2B9C2025E6EC0000995E /* CategoriesCollectionViewCell.swift in Sources */,
 				EAE790A520342B780025C9E2 /* UIViewPopAnimationExtentions.swift in Sources */,
 				EAB2CE191FD01F1F00542946 /* MainQuizController.swift in Sources */,

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// TODO: Get this label to actually animate
 class CountingLabel: UILabel {
     
     enum AnimationType {
