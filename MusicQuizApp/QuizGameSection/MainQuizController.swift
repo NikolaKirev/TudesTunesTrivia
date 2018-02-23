@@ -13,20 +13,11 @@ class MainQuizController: UIViewController, CountdownViewDelegate {
     
     @IBOutlet weak var coundownAnimationView: CountdownView!
     
-    @IBOutlet weak var questionsLabel: UILabel! {
-        didSet {
-            questionsLabel.font = UIFont.systemFont(ofSize: 23.0, weight: .regular)
-        }
-    }
+    @IBOutlet weak var questionsLabel: QuestionLabel!
     
     @IBOutlet var answerButtons: [AnswerButton]!
     
-    @IBOutlet weak var nextQuestionButton: UIButton! {
-        didSet {
-            nextQuestionButton?.backgroundColor = UIColor.ttReddishPink
-            nextQuestionButton?.layer.cornerRadius = (nextQuestionButton?.bounds.size.height)!/2
-        }
-    }
+    @IBOutlet weak var nextQuestionButton: NextQuestionButton!
     
     var amountOfCorrectAnswers = 0
     

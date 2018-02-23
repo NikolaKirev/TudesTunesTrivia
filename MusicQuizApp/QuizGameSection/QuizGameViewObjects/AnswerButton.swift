@@ -9,19 +9,21 @@
 import UIKit
 
 class AnswerButton: UIButton {
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
     }
     
-    private func setup() {
-        layer.borderWidth = 3
-        let buttonBorderColor = UIColor.ttPowderBlue
-        layer.borderColor = buttonBorderColor.cgColor
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = bounds.size.height/2
+    }
+    
+    private func setup() {
+        layer.borderWidth = 2
+        let buttonBorderColor = UIColor.ttPowderBlue
+        layer.borderColor = buttonBorderColor.cgColor
+        backgroundColor = UIColor.white
     }
 }
