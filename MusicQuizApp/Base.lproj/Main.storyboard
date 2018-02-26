@@ -32,7 +32,7 @@
                                 <color key="textColor" red="0.91993422940000003" green="0.98093257450000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpO-U4-gdc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpO-U4-gdc" customClass="StartQuizButton" customModule="MusicQuizApp" customModuleProvider="target">
                                 <rect key="frame" x="90" y="511" width="194" height="69"/>
                                 <color key="backgroundColor" red="0.97680455446243286" green="0.83465087470430943" blue="0.75313276583089517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -47,7 +47,7 @@
                                     <segue destination="1Qp-eL-3vA" kind="show" id="kTA-Fg-iQp"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agJ-Dp-yYO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agJ-Dp-yYO" customClass="ProfilePictureImageView" customModule="MusicQuizApp" customModuleProvider="target">
                                 <rect key="frame" x="260" y="64" width="75" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -177,8 +177,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bottomLeftQuizCircle" translatesAutoresizingMaskIntoConstraints="NO" id="UXQ-zp-Jtq">
-                                <rect key="frame" x="0.0" y="422" width="200" height="260"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomLeftQuizCircle" translatesAutoresizingMaskIntoConstraints="NO" id="UXQ-zp-Jtq">
+                                <rect key="frame" x="0.0" y="415" width="215" height="252"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="middleQuizCircle" translatesAutoresizingMaskIntoConstraints="NO" id="2PF-ZA-S9x">
                                 <rect key="frame" x="225" y="215" width="150" height="300"/>
@@ -287,7 +287,6 @@
                             <constraint firstItem="i1Z-BH-jSo" firstAttribute="trailing" secondItem="o0g-Xe-tAV" secondAttribute="trailing" constant="99" id="0lH-Yc-17p"/>
                             <constraint firstItem="v94-nc-xwg" firstAttribute="leading" secondItem="i1Z-BH-jSo" secondAttribute="leading" constant="16" id="1By-wg-SfE"/>
                             <constraint firstItem="UXQ-zp-Jtq" firstAttribute="leading" secondItem="d5a-GZ-BnM" secondAttribute="leading" id="2gn-nJ-z0H"/>
-                            <constraint firstItem="UXQ-zp-Jtq" firstAttribute="centerY" secondItem="d5a-GZ-BnM" secondAttribute="centerY" constant="218.5" id="3ee-tL-Lxa"/>
                             <constraint firstItem="o0g-Xe-tAV" firstAttribute="leading" secondItem="i1Z-BH-jSo" secondAttribute="leading" constant="16" id="3k3-h4-bKb"/>
                             <constraint firstItem="wl2-Ie-s3m" firstAttribute="top" secondItem="ehU-ky-Lg3" secondAttribute="bottom" constant="20" id="67c-ro-XzV"/>
                             <constraint firstItem="v94-nc-xwg" firstAttribute="top" secondItem="48j-3r-lUG" secondAttribute="bottom" constant="56.5" id="6hU-aC-eZG"/>
@@ -295,6 +294,7 @@
                             <constraint firstItem="2PF-ZA-S9x" firstAttribute="centerY" secondItem="d5a-GZ-BnM" secondAttribute="centerY" constant="31.5" id="Amp-IY-sqy"/>
                             <constraint firstItem="MTq-jS-ten" firstAttribute="leading" secondItem="v94-nc-xwg" secondAttribute="trailing" constant="8" id="BYk-jv-3o5"/>
                             <constraint firstItem="i1Z-BH-jSo" firstAttribute="trailing" secondItem="Bdy-sX-7QS" secondAttribute="trailing" constant="11" id="FH0-Xu-Wmu"/>
+                            <constraint firstAttribute="bottom" secondItem="UXQ-zp-Jtq" secondAttribute="bottom" id="HDA-ug-zCI"/>
                             <constraint firstItem="MTq-jS-ten" firstAttribute="top" secondItem="48j-3r-lUG" secondAttribute="bottom" constant="56.5" id="HHL-g0-yvH"/>
                             <constraint firstItem="ehU-ky-Lg3" firstAttribute="top" secondItem="Pd2-hO-An8" secondAttribute="bottom" constant="55" id="Hhc-da-7v9"/>
                             <constraint firstItem="i1Z-BH-jSo" firstAttribute="trailing" secondItem="48j-3r-lUG" secondAttribute="trailing" constant="16" id="I5Z-2C-2Yx"/>
@@ -457,6 +457,6 @@
         <image name="topLeftQuizCircle" width="215" height="252"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="umc-36-eb7"/>
+        <segue reference="kTA-Fg-iQp"/>
     </inferredMetricsTieBreakers>
 </document>

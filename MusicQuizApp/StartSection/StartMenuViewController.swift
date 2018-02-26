@@ -14,8 +14,8 @@ class StartMenuViewController: UIViewController {
     
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var appTitle: UILabel!
-    @IBOutlet weak var profilePicture: UIImageView!
-    @IBOutlet weak var startQuizButton: UIButton!
+    @IBOutlet weak var profilePicture: ProfilePictureImageView!
+    @IBOutlet weak var startQuizButton: StartQuizButton!
     
     var loginButton: LoginButton = LoginButton(readPermissions: [.publicProfile])
     
@@ -40,11 +40,6 @@ class StartMenuViewController: UIViewController {
         if (FBSDKAccessToken.current()) != nil {
             getFBUserData()
         }
-        self.profilePicture.frame = CGRect(x: 275, y: 79, width: 50, height: 50)
-        self.profilePicture.layer.cornerRadius = self.profilePicture.frame.size.height / 2;
-        self.profilePicture.layer.masksToBounds = true
-        self.profilePicture.layer.borderWidth = 0;
-        self.profilePicture.contentMode = .scaleAspectFill
     }
     
     func startButtonProperties() {
