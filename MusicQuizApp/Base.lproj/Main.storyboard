@@ -51,32 +51,12 @@
                                 <rect key="frame" x="260" y="64" width="75" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c8-SF-Rih">
-                                <rect key="frame" x="64" y="245" width="247" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="247" id="RCn-5o-fNk"/>
-                                    <constraint firstAttribute="height" constant="21" id="zGq-IX-2Wz"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="&quot;All the music I like&quot;  ">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="Arial-ItalicMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.54670627663772264" green="0.86061024396551544" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8c8-SF-Rih" secondAttribute="trailing" constant="64" id="6Q2-Zw-lCe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hph-cr-SXT" secondAttribute="trailing" constant="16" id="A46-kF-S6s"/>
                             <constraint firstItem="fpO-U4-gdc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="JqS-uR-yaS"/>
-                            <constraint firstItem="fpO-U4-gdc" firstAttribute="top" secondItem="8c8-SF-Rih" secondAttribute="bottom" constant="245" id="MmU-P8-9qp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fpO-U4-gdc" secondAttribute="trailing" constant="91" id="SHT-DG-yj8"/>
-                            <constraint firstItem="8c8-SF-Rih" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="SRN-ZY-Trj"/>
                             <constraint firstItem="fpO-U4-gdc" firstAttribute="top" secondItem="Hph-cr-SXT" secondAttribute="bottom" constant="299.5" id="WbB-VR-UQr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fpO-U4-gdc" secondAttribute="bottom" constant="87" id="WfW-xg-TJy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fpO-U4-gdc" secondAttribute="trailing" constant="91" id="abN-lk-Xm4"/>
@@ -85,7 +65,6 @@
                             <constraint firstItem="fpO-U4-gdc" firstAttribute="top" secondItem="Hph-cr-SXT" secondAttribute="bottom" constant="299.5" id="nzJ-Mo-GiX"/>
                             <constraint firstItem="Hph-cr-SXT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="153" id="sNe-Wf-T4u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fpO-U4-gdc" secondAttribute="bottom" constant="87" id="xT1-Zw-5jp"/>
-                            <constraint firstItem="8c8-SF-Rih" firstAttribute="top" secondItem="Hph-cr-SXT" secondAttribute="bottom" constant="33.5" id="zLo-6s-k4l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
