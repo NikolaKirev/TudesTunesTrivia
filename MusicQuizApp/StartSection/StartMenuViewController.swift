@@ -10,8 +10,12 @@ import UIKit
 import FacebookLogin
 import FBSDKLoginKit
 
+// If you don't plan to subclass StartMenuViewController you could make it `final`.
+// That will prevent subclassing. Subclassing is a grat tool to have but in Swift we can use protocols to share behaviour.
+// That tends to be more scalable that subclassing.
 class StartMenuViewController: UIViewController {
-    
+
+    // You could make most or all of your IBOutlest private. Interface builder will still "see" them but other object will not be able to interact wit hthem and cause side effects.
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var appTitle: UILabel!
     @IBOutlet weak var profilePicture: ProfilePictureImageView!
@@ -33,7 +37,8 @@ class StartMenuViewController: UIViewController {
         loginButton.isHidden = (FBSDKAccessToken.current()) != nil
         getFBUserData()
     }
-    
+
+    // consider making private
     func facebookLoginProperties() {
         loginButton.center = view.center
         view.addSubview(loginButton)
@@ -41,14 +46,15 @@ class StartMenuViewController: UIViewController {
             getFBUserData()
         }
     }
-    
+    // consider making private
     func startButtonProperties() {
         let button = startQuizButton
-        button?.backgroundColor = UIColor.ttReddishPink
+        button?.backgroundColor = UIColor.ttReddishPink // you could move these to the button `setup()` and call it from `awakeFromNib`
         button?.clipsToBounds = true
         button?.layer.cornerRadius = 5.0
     }
-    
+
+    // consider making private
     @objc func loginButtonClicked() {
         let loginManager = LoginManager()
         loginManager.logIn(readPermissions: [.publicProfile, .userFriends], viewController: nil) { loginResult in
@@ -62,7 +68,8 @@ class StartMenuViewController: UIViewController {
             }
         }
     }
-    
+  
+    // consider making private
     func getFBUserData() {
         if ((FBSDKAccessToken.current()) != nil) {
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, email"]).start(completionHandler: { (connection,  result, error) -> Void in

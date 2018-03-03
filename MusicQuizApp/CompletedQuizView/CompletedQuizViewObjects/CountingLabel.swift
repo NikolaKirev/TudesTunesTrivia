@@ -6,20 +6,20 @@
 //  Copyright © 2018 Jack Tudor. All rights reserved.
 //
 
-import Foundation
+import Foundation // You can remove this. importing UIKit brings Foundation with it.
 import UIKit
 
 // TODO: Get this label to actually animate
 class CountingLabel: UILabel {
-    
+
     enum AnimationType {
-        case Linear
+        case Linear // enumerations should start with a lowercase symbol
         case EaseIn
         case EaseOut
     }
     
     enum CounterType {
-        case Int
+        case Int // enumerations should start with a lowercase symbol
         case Float
     }
     

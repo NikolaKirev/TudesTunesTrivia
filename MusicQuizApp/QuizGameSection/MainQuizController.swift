@@ -9,8 +9,10 @@
 import UIKit
 import AudioToolbox
 
+// cinsider making final
 class MainQuizController: UIViewController, CountdownViewDelegate {
-    
+
+    // can these be `private`?
     @IBOutlet weak var coundownAnimationView: CountdownView!
     
     @IBOutlet weak var questionsLabel: QuestionLabel!
@@ -21,7 +23,7 @@ class MainQuizController: UIViewController, CountdownViewDelegate {
     
     var amountOfCorrectAnswers = 0
     
-    var quizData: QuizData!
+    var quizData: QuizData! // This is unsafe. I see you have some logic for checking if this is `nil`. Make it optional.
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +73,7 @@ class MainQuizController: UIViewController, CountdownViewDelegate {
             navigationController?.show(nextViewController, sender: self)
         }
     }
-        
+    // could be `private`
     func displayData(question: String, answersData: [String]) {
         coundownAnimationView.start()
         questionsLabel.text = question
@@ -80,9 +82,10 @@ class MainQuizController: UIViewController, CountdownViewDelegate {
             button.setTitle(shuffledAnswers[answerButtons.index(of: button)!], for: .normal)
         }
     }
-    
+
+    // could be `private`
     func loadQuizCompletedView() {
-        let completedViewController = storyboard?.instantiateViewController(withIdentifier: NewStoryboardIdentifiers.QuizCompleteView.rawValue) as! QuizCompletedViewController
+        let completedViewController = storyboard?.instantiateViewController(withIdentifier: NewStoryboardIdentifiers.QuizCompleteView.rawValue) as! QuizCompletedViewController // Unsafe. Use `guard` to safely unwrap.
         completedViewController.correctAnswers = self.amountOfCorrectAnswers
         navigationController?.pushViewController(completedViewController, animated: true)
     }

@@ -8,6 +8,9 @@
 
 import Foundation
 
+// Right now this is a global variable that. These should be avoided.
+// An improvement will be to make `QuizData` into a singleton and keep the quiz data in there.
+// If you don't need the data to be shared maybe you could ask the `QuizData` to load you a fresh set of questions every time you start.
 var sharedQuizData = QuizData.loadInQuizData(forFileNamed: "Noughties")
 
 struct QuizData {

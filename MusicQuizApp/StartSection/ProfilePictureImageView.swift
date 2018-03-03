@@ -9,7 +9,8 @@
 import UIKit
 
 class ProfilePictureImageView: UIImageView {
-    
+
+    // You could remove that. currently it's not doing anything.
     override func awakeFromNib() {
         super.awakeFromNib()
         

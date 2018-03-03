@@ -9,7 +9,8 @@
 import UIKit
 
 class StartQuizButton: UIButton {
-    
+
+    // It looks like this is not doing anything? maybe your idea was to call `setup()` here?
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -18,7 +19,8 @@ class StartQuizButton: UIButton {
         super.layoutSubviews()
         layer.cornerRadius = bounds.size.height / 2
     }
-    
+
+    // Consider making theis private and calling it in `awakeFromNib`
     func setup() {
         backgroundColor = UIColor.ttReddishPink
     }
